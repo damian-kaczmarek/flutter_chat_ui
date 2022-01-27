@@ -80,6 +80,8 @@ abstract class ChatTheme {
     required this.secondaryColor,
     required this.seenIcon,
     required this.sendButtonIcon,
+    required this.sendButtonPadding,
+    required this.sendButtonMargin,
     required this.sendingIcon,
     required this.sentEmojiMessageTextStyle,
     required this.sentMessageBodyTextStyle,
@@ -190,6 +192,12 @@ abstract class ChatTheme {
 
   /// Icon for send button
   final Widget? sendButtonIcon;
+
+  /// Padding of send button
+  final EdgeInsetsGeometry? sendButtonPadding;
+
+  /// Margin of send button
+  final EdgeInsetsGeometry? sendButtonMargin;
 
   /// Icon for message's `sending` status. For the best look use size of 10.
   final Widget? sendingIcon;
@@ -316,6 +324,8 @@ class DefaultChatTheme extends ChatTheme {
     Color secondaryColor = secondary,
     Widget? seenIcon,
     Widget? sendButtonIcon,
+    EdgeInsetsGeometry? sendButtonPadding,
+    EdgeInsetsGeometry? sendButtonMargin,
     Widget? sendingIcon,
     TextStyle sentEmojiMessageTextStyle = const TextStyle(fontSize: 40),
     TextStyle sentMessageBodyTextStyle = const TextStyle(
@@ -391,6 +401,8 @@ class DefaultChatTheme extends ChatTheme {
           secondaryColor: secondaryColor,
           seenIcon: seenIcon,
           sendButtonIcon: sendButtonIcon,
+          sendButtonPadding: sendButtonPadding,
+          sendButtonMargin: sendButtonMargin,
           sendingIcon: sendingIcon,
           sentEmojiMessageTextStyle: sentEmojiMessageTextStyle,
           sentMessageBodyTextStyle: sentMessageBodyTextStyle,
@@ -488,6 +500,8 @@ class DarkChatTheme extends ChatTheme {
     Color secondaryColor = secondaryDark,
     Widget? seenIcon,
     Widget? sendButtonIcon,
+    EdgeInsetsGeometry? sendButtonPadding,
+    EdgeInsetsGeometry? sendButtonMargin,
     Widget? sendingIcon,
     TextStyle sentEmojiMessageTextStyle = const TextStyle(fontSize: 40),
     TextStyle sentMessageBodyTextStyle = const TextStyle(
@@ -563,6 +577,8 @@ class DarkChatTheme extends ChatTheme {
           secondaryColor: secondaryColor,
           seenIcon: seenIcon,
           sendButtonIcon: sendButtonIcon,
+          sendButtonPadding: sendButtonPadding,
+          sendButtonMargin: sendButtonMargin,
           sendingIcon: sendingIcon,
           sentEmojiMessageTextStyle: sentEmojiMessageTextStyle,
           sentMessageBodyTextStyle: sentMessageBodyTextStyle,
